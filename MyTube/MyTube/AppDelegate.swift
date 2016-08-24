@@ -24,8 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window?.rootViewController = UINavigationController(rootViewController: HomeViewController(collectionViewLayout: layout))
     
+    UINavigationBar.appearance().barTintColor = UIColor.rbga(230, green: 32, blue: 31, alpha: 1)// YouTube red
+    
+    application.statusBarStyle = .LightContent
+    
+    let statusBarBackgroundView = UIView()
+    statusBarBackgroundView.backgroundColor = UIColor.rbga(194, green: 31, blue: 31, alpha: 1)
+    
+    window?.addSubview(statusBarBackgroundView)
+    window?.addConstraintsWithFormat("H:|[v0]|", views: statusBarBackgroundView)
+    window?.addConstraintsWithFormat("V:|[v0(20)]", views: statusBarBackgroundView)
+    
     return true
   }
+  
+  
 
   func applicationWillResignActive(application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

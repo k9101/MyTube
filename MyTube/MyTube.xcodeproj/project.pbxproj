@@ -13,6 +13,7 @@
 		01D5F00D1D6E41C50016593D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D5F00B1D6E41C50016593D /* LaunchScreen.storyboard */; };
 		01D5F0151D6E44D30016593D /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5F0141D6E44D30016593D /* VideoCell.swift */; };
 		01D5F0191D6E4A0C0016593D /* UIViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5F0181D6E4A0C0016593D /* UIViewConstraints.swift */; };
+		01D5F01C1D6E5A960016593D /* UIColorRGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5F01B1D6E5A960016593D /* UIColorRGBA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		01D5F00E1D6E41C50016593D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D5F0141D6E44D30016593D /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		01D5F0181D6E4A0C0016593D /* UIViewConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewConstraints.swift; sourceTree = "<group>"; };
+		01D5F01B1D6E5A960016593D /* UIColorRGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorRGBA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				01D5F0181D6E4A0C0016593D /* UIViewConstraints.swift */,
+				01D5F01B1D6E5A960016593D /* UIColorRGBA.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D5F01C1D6E5A960016593D /* UIColorRGBA.swift in Sources */,
 				01D5F0051D6E41C50016593D /* HomeViewController.swift in Sources */,
 				01D5F0031D6E41C50016593D /* AppDelegate.swift in Sources */,
 				01D5F0151D6E44D30016593D /* VideoCell.swift in Sources */,

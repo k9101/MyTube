@@ -14,9 +14,18 @@ class HomeViewController: UICollectionViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     navigationItem.title = "Home"
+    navigationController?.navigationBar.translucent = false
+    
+    let titleLabel = UILabel(frame: CGRectMake(0, 0, view.frame.width-32, view.frame.height))
+    titleLabel.text = "Home"
+    titleLabel.textColor = .whiteColor()
+    titleLabel.font = UIFont.systemFontOfSize(20)
+    navigationItem.titleView = titleLabel
+    
     collectionView?.backgroundColor = .whiteColor()
     
     collectionView?.registerClass(VideoCell.self, forCellWithReuseIdentifier: "videocellId")
+    
   }
   
   override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,7 +46,8 @@ class HomeViewController: UICollectionViewController {
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    return CGSizeMake(view.frame.width, 200)
+    let height = (view.frame.width - 32) * (9/16) // 16:9 Aspect Ratio
+    return CGSizeMake(view.frame.width, height+84) // account for other elements
   }
 }
 

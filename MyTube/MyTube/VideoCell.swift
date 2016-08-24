@@ -12,34 +12,39 @@ class VideoCell: UICollectionViewCell {
   
   let thumbnailImageView: UIImageView = {
     let imageView = UIImageView()
-    imageView.backgroundColor = .blueColor()
+    imageView.image = UIImage(named: "taylor_swift_blank_space")
+    imageView.contentMode = .ScaleAspectFill
+    imageView.clipsToBounds = true
     return imageView
   }()
   
   let separatorView: UIView = {
     let view = UIView()
-    view.backgroundColor = .blackColor()
+    view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
     return view
   }()
   
   let userProfileImageView: UIImageView = {
     let imageView = UIImageView()
-    imageView.backgroundColor = .greenColor()
+    imageView.image = UIImage(named: "taylor_swift_profile")
+    imageView.layer.cornerRadius = 22
+    imageView.layer.masksToBounds = true
     return imageView
   }()
   
   let titleLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.backgroundColor = .purpleColor()
-    
+    label.text = "Taylor Swift - Blank Space"
     return label
   }()
   
   let subtitleTextView: UITextView = {
     let tv = UITextView()
-    tv.backgroundColor = .redColor()
     tv.translatesAutoresizingMaskIntoConstraints = false
+    tv.text = "TaylorSwiftVevo • 1,604,684,607 views • 2 years ago"
+    tv.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
+    tv.textColor = .lightGrayColor()
     return tv
   }()
   
@@ -71,7 +76,7 @@ class VideoCell: UICollectionViewCell {
     
     //Top Constraints
     addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .Top, relatedBy: .Equal, toItem: thumbnailImageView, attribute: .Bottom, multiplier: 1, constant: 8))
-    addConstraint(NSLayoutConstraint(item: subtitleTextView, attribute: .Top, relatedBy: .Equal, toItem: titleLabel, attribute: .Bottom, multiplier: 1, constant: 8))
+    addConstraint(NSLayoutConstraint(item: subtitleTextView, attribute: .Top, relatedBy: .Equal, toItem: titleLabel, attribute: .Bottom, multiplier: 1, constant: 4))
     
     //Left Constraints
     addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .Left, relatedBy: .Equal, toItem: userProfileImageView, attribute: .Right, multiplier: 1, constant: 8))
@@ -83,7 +88,7 @@ class VideoCell: UICollectionViewCell {
     
     //Height Constraints
     addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .Height, relatedBy: .Equal, toItem: self, attribute: .Height, multiplier: 0, constant: 20))
-    addConstraint(NSLayoutConstraint(item: subtitleTextView, attribute: .Height, relatedBy: .Equal, toItem: self, attribute: .Height, multiplier: 0, constant: 20))
+    addConstraint(NSLayoutConstraint(item: subtitleTextView, attribute: .Height, relatedBy: .Equal, toItem: self, attribute: .Height, multiplier: 0, constant: 30))
     
     
   }
